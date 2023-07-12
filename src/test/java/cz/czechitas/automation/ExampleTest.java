@@ -19,6 +19,11 @@ final class ExampleTest extends TestRunner {
     }
 
     @Test
+    void failDemo() {
+        assert false;
+    }
+
+    @Test
     void overUspesnePrihlaseni() {
         prohlizec.prihlasovani.klikniNaTlacitkoPrihlasit();
         prohlizec.prihlasovani.vyplnEmail("da-app.admin@czechitas.cz");

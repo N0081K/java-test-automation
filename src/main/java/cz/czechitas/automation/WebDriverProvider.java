@@ -48,6 +48,7 @@ public final class WebDriverProvider {
         try {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--headless=new");
             return WebDriverManager.chromedriver().capabilities(options).create();
         } catch (WebDriverManagerException exception1) {
             return createEdgeDriver();
